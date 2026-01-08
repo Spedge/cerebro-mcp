@@ -6,7 +6,7 @@ const querystring = require('querystring');
 class TokenStorage {
   constructor(config) {
     this.config = {
-      tokenStorePath: path.join(process.env.HOME || process.env.USERPROFILE, '.outlook-mcp-tokens.json'),
+      tokenStorePath: path.join(process.env.HOME || process.env.USERPROFILE, '.microsoft-token.json'),
       clientId: process.env.MS_CLIENT_ID,
       clientSecret: process.env.MS_CLIENT_SECRET,
       redirectUri: process.env.MS_REDIRECT_URI || 'http://localhost:3333/auth/callback',

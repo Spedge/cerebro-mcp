@@ -25,7 +25,7 @@ const baseConfig = {
 
 describe('TokenStorage', () => {
   let tokenStorage;
-  const tokenStorePath = path.join(mockHomeDir, '.outlook-mcp-tokens.json');
+  const tokenStorePath = path.join(mockHomeDir, '.microsoft-token.json');
 
   beforeEach(() => {
     jest.clearAllMocks();

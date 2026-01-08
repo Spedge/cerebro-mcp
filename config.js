@@ -22,7 +22,7 @@ module.exports = {
     tenantId: process.env.OUTLOOK_TENANT_ID || 'common',
     redirectUri: 'http://localhost:3333/auth/callback',
     scopes: ['Mail.Read', 'Mail.ReadWrite', 'Mail.Send', 'User.Read', 'Calendars.Read', 'Calendars.ReadWrite'],
-    tokenStorePath: path.join(homeDir, '.outlook-mcp-tokens.json'),
+    tokenStorePath: path.join(homeDir, '.microsoft-token.json'),
     authServerUrl: 'http://localhost:3333'
   },
   

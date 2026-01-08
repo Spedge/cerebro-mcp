@@ -1,9 +1,8 @@
 [![MseeP.ai Security Assessment Badge](https://mseep.net/pr/ryaker-outlook-mcp-badge.png)](https://mseep.ai/app/ryaker-outlook-mcp)
 
-# Modular Outlook MCP Server
+# Cerebro MCP Server
 
-This is a modular implementation of the Outlook MCP (Model Context Protocol) server that connects Claude with Microsoft Outlook through the Microsoft Graph API.
-Certified by MCPHub https://mcphub.com/mcp-servers/ryaker/outlook-mcp
+This is a modular MCP (Model Context Protocol) server that connects Claude with multiple productivity services and APIs, including Microsoft Outlook through the Microsoft Graph API.
 
 ## Directory Structure
 
@@ -145,10 +144,10 @@ Copy the configuration from `claude-config-sample.json` to your Claude Desktop c
 ```json
 {
   "mcpServers": {
-    "outlook-assistant": {
+    "cerebro-assistant": {
       "command": "node",
       "args": [
-        "/absolute/path/to/outlook-mcp/index.js"
+        "/absolute/path/to/cerebro-mcp/index.js"
       ],
       "env": {
         "USE_TEST_MODE": "false",
@@ -208,7 +207,7 @@ This starts a local server on port 3333 that handles the OAuth callback from Mic
 4. Sign in with your Microsoft account
 5. Grant the requested permissions
 6. You'll be redirected back to a success page
-7. Tokens are automatically stored in `~/.outlook-mcp-tokens.json`
+7. Tokens are automatically stored in `~/.microsoft-token.json`
 
 The authentication server can be stopped after successful authentication (tokens are saved). However, you'll need to restart it if you need to re-authenticate.
 
@@ -254,7 +253,7 @@ Then restart the auth server: `npm run auth-server`
 **Root Cause**: Token may have expired or been corrupted.
 
 **Solutions**:
-1. Check if token file exists: `~/.outlook-mcp-tokens.json`
+1. Check if token file exists: `~/.microsoft-token.json`
 2. If corrupted, delete the file and re-authenticate
 3. Restart the auth server and authenticate again
 
@@ -276,7 +275,7 @@ Then restart the auth server: `npm run auth-server`
 
 - **OData Filter Errors**: Check server logs for escape sequence issues
 - **API Call Failures**: Look for detailed error messages in the response
-- **Token Refresh Issues**: Delete `~/.outlook-mcp-tokens.json` and re-authenticate
+- **Token Refresh Issues**: Delete `~/.microsoft-token.json` and re-authenticate
 
 ### Getting Help
 

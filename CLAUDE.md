@@ -19,7 +19,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Architecture Overview
 
-This is a modular MCP (Model Context Protocol) server that provides Claude with access to Microsoft Outlook via the Microsoft Graph API. The architecture is organized into functional modules:
+This is a modular MCP (Model Context Protocol) server that provides Claude with access to multiple productivity services and APIs, including Microsoft Outlook via the Microsoft Graph API. The architecture is organized into functional modules:
 
 ### Core Structure
 - `index.js` - Main entry point that combines all module tools and handles MCP protocol
@@ -36,7 +36,7 @@ Each module exports tools and handlers:
 - `utils/` - Shared utilities including Graph API client and OData helpers
 
 ### Key Components
-- **Token Management**: Tokens stored in `~/.outlook-mcp-tokens.json`
+- **Token Management**: Tokens stored in `~/.microsoft-token.json`
 - **Graph API Client**: `utils/graph-api.js` handles all Microsoft Graph API calls with proper OData encoding
 - **Test Mode**: Mock data responses when `USE_TEST_MODE=true`
 - **Modular Tools**: Each module exports tools array that gets combined in main server

@@ -1,7 +1,7 @@
 {
-  "name": "outlook-mcp",
+  "name": "cerebro-mcp",
   "version": "1.0.0",
-  "description": "MCP server for Claude to access Outlook data via Microsoft Graph API",
+  "description": "MCP server for Claude to integrate with multiple productivity services and APIs",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",

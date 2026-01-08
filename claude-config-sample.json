@@ -1,9 +1,9 @@
 {
   "mcpServers": {
-    "outlook-assistant": {
+    "cerebro-assistant": {
       "command": "node",
       "args": [
-        "/path/to/outlook-mcp/index.js"
+        "/path/to/cerebro-mcp/index.js"
       ],
       "env": {
         "USE_TEST_MODE": "false",
