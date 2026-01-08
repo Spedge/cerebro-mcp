@@ -184,7 +184,7 @@ To configure server behavior, you can edit `config.js` to change:
 You can test the server using:
 
 ```bash
-./test-modular-server.sh
+./scripts/test/test-modular-server.sh
 ```
 
 This will use the MCP Inspector to directly connect to the server and let you test the available tools.

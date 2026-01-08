@@ -10,8 +10,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm run test-mode` - Start the server in test mode with mock data
 - `npm run inspect` - Use MCP Inspector to test the server interactively
 - `npm test` - Run Jest tests
-- `./test-modular-server.sh` - Test the server using MCP Inspector
-- `./test-direct.sh` - Direct testing script
+- `./scripts/test/test-modular-server.sh` - Test the server using MCP Inspector
+- `./scripts/test/test-direct.sh` - Direct testing script
+- `./scripts/debug/debug-env.js` - Debug environment variables and configuration
+- `./scripts/debug/test-config.js` - Test configuration loading
+- `./scripts/test/test-pagination.js` - Test pagination functionality
 - `npx kill-port 3333` - Kill process using port 3333 if auth server won't start
 
 ## Architecture Overview

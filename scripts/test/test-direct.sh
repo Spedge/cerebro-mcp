@@ -1,8 +1,12 @@
 #!/bin/bash
 # Test the modular Outlook MCP server directly
 
+# Get the script directory and project root
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+
 # Run the server in a background process
-node /Users/ryaker/Documents/LocalDev/MCP/Projects/OutlookAssistant/modular/index.js > /dev/null 2>&1 &
+node "$PROJECT_ROOT/index.js" > /dev/null 2>&1 &
 SERVER_PID=$!
 
 echo "Started modular Outlook MCP server with PID: $SERVER_PID"
